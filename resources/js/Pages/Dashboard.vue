@@ -1,10 +1,16 @@
 <script setup>
+import { onMounted } from 'vue';
 import { Head } from '@inertiajs/vue3';
 
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import Tables from '@/Components/App/Tables.vue'
 import Forms from '@/Components/App/MyForms.vue'
 import Profile from '@/Components/App/Profile.vue'
+import { loadChartJs } from "@/CustomJs/chart.sample";
+
+onMounted(() => {
+    loadChartJs()
+})
 </script>
 
 <template>

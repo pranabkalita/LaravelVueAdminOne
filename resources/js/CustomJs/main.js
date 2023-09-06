@@ -1,5 +1,3 @@
-import { loadChartJs } from "./chart.sample";
-
 export const loadCustomJs = () => {
     // Function to close all dropdowns
     // Function to close all navbar-item dropdowns
@@ -118,7 +116,4 @@ export const loadCustomJs = () => {
             }
         });
     });
-
-    // Load Chart
-    loadChartJs();
 };
