@@ -81,4 +81,40 @@ setTimeout(() => {
             dropdownIcon.classList.toggle("mdi-close");
         });
     });
+
+    // Modal: open
+    document.querySelectorAll(".--jb-modal").forEach((el) => {
+        el.addEventListener("click", (e) => {
+            const modalTarget = e.currentTarget.getAttribute("data-target");
+            const modal = document.getElementById(modalTarget);
+
+            if (modal) {
+                modal.classList.add("active");
+                document.documentElement.classList.add("clipped");
+            }
+        });
+    });
+
+    // Modal: close
+    document.querySelectorAll(".--jb-modal-close").forEach((el) => {
+        el.addEventListener("click", (e) => {
+            const modal = e.currentTarget.closest(".modal");
+
+            if (modal) {
+                modal.classList.remove("active");
+                document.documentElement.classList.remove("clipped");
+            }
+        });
+    });
+
+    // Notification dismiss
+    document.querySelectorAll(".--jb-notification-dismiss").forEach((el) => {
+        el.addEventListener("click", (e) => {
+            const notification = e.currentTarget.closest(".notification");
+
+            if (notification) {
+                notification.classList.add("hidden");
+            }
+        });
+    });
 }, 100);

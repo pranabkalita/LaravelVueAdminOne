@@ -1,6 +1,10 @@
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
+
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import Tables from '@/Components/App/Tables.vue'
+import Forms from '@/Components/App/MyForms.vue'
+import Profile from '@/Components/App/Profile.vue'
 </script>
 
 <template>
@@ -385,6 +389,51 @@ import { Head } from '@inertiajs/vue3';
                         <small>Page 1 of 3</small>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Tables -->
+        <h1>Tables</h1>
+        <Tables />
+
+        <!-- Forms -->
+        <h1>Forms</h1>
+        <Forms />
+
+        <!-- Profile -->
+        <h1>Profile</h1>
+        <Profile />
+
+        <div id="sample-modal" class="modal">
+            <div class="modal-background --jb-modal-close"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Sample modal</p>
+                </header>
+                <section class="modal-card-body">
+                    <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
+                    <p>This is sample modal</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button --jb-modal-close">Cancel</button>
+                    <button class="button red --jb-modal-close">Confirm</button>
+                </footer>
+            </div>
+        </div>
+        <div id="sample-modal-2" class="modal">
+            <div class="modal-background --jb-modal-close"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Sample modal</p>
+                </header>
+                <section class="modal-card-body">
+                    <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
+                    <p>This is sample modal</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button --jb-modal-close">Cancel</button>
+                    <button class="button blue --jb-modal-close">Confirm</button>
+                </footer>
             </div>
         </div>
     </AuthenticatedLayout>
