@@ -1,5 +1,6 @@
-/* Aside & Navbar: dropdowns */
-setTimeout(() => {
+import { loadChartJs } from "./chart.sample";
+
+export const loadCustomJs = () => {
     // Function to close all dropdowns
     // Function to close all navbar-item dropdowns
     const closeNavbarItemDropdowns = () => {
@@ -117,4 +118,7 @@ setTimeout(() => {
             }
         });
     });
-}, 100);
+
+    // Load Chart
+    loadChartJs();
+};

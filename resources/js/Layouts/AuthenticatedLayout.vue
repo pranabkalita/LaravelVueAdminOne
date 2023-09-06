@@ -2,10 +2,16 @@
 import Navigation from '@/Layouts/Partials/Navigation.vue'
 import Aside from '@/Layouts/Partials/Aside.vue'
 import Footer from '@/Layouts/Partials/Footer.vue'
+import { loadCustomJs } from '@/CustomJs/main'
+import { onMounted } from 'vue'
+
+onMounted(() => {
+    loadCustomJs()
+})
 </script>
 
 <template>
-    <div>
+    <div id="auth">
         <Navigation />
 
         <Aside />
@@ -25,3 +31,5 @@ import Footer from '@/Layouts/Partials/Footer.vue'
         <Footer />
     </div>
 </template>
+
+<style scoped src="../../css/main.css"></style>

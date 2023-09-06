@@ -1,4 +1,4 @@
-body {
+#auth {
   @apply bg-gray-50 text-base pt-14 lg:pl-60;
 }
 

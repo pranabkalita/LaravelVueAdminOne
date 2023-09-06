@@ -84,10 +84,9 @@
                     <span>GitHub</span>
                 </a>
 
-                <a title="Log out" class="navbar-item desktop-icon-only">
-                    <span class="icon"><i class="mdi mdi-logout"></i></span>
-                    <span>Log out</span>
-                </a>
+                <DropdownLink :href="route('logout')" method="post" as="button">
+                    Log Out
+                </DropdownLink>
             </div>
         </div>
     </nav>
@@ -97,6 +96,7 @@
 // Imports
 import { Link } from '@inertiajs/vue3'
 import DropdownMenuLink from '@/Components/DropdownMenuLink.vue';
+import DropdownLink from '@/Components/DropdownLink.vue';
 
 // Uses
 
